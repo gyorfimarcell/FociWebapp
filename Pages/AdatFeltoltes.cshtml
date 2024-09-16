@@ -1,0 +1,12 @@
+﻿@page
+@model FociWebapp.Pages.AdatFeltoltesModel
+@{
+    ViewData["Title"] = "Adatfeltöltés";
+}
+
+<h1>Adatfeltöltés</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="file"/>
+    <button type="submit">Feltöltés</button>
+</form>

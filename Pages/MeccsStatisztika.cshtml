@@ -1,0 +1,38 @@
+﻿@page
+@model FociWebapp.Pages.MeccsStatisztikaModel
+@{
+    ViewData["Title"] = "Statisztika";
+}
+
+<h1>Statisztika</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Helyezés</th>
+            <th>Csapat neve</th>
+            <th>Játszott mérkőzések száma</th>
+            <th>Győzelem</th>
+            <th>Döntetlen</th>
+            <th>Vereség</th>
+            <th>Pontszám</th>
+            <th>Lőtt gól</th>
+            <th>Kapott gól</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Csapat csapat in Model.Csapatok)
+        {
+            <tr>
+                <td>@(Model.Csapatok.IndexOf(csapat) + 1).</td>
+                <td>@csapat.Nev</td>
+                <td>@csapat.Merkozesek</td>
+                <td>@csapat.Gyozelem</td>
+                <td>@csapat.Dontetlen</td>
+                <td>@csapat.Vereseg</td>
+                <td>@csapat.Pontszam</td>
+                <td>@csapat.LottGol</td>
+                <td>@csapat.KapottGol</td>
+            </tr>
+        }
+    </tbody>
+</table>
